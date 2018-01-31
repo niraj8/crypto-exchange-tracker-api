@@ -1,0 +1,31 @@
+{
+  "name": "crypto-ticker",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run server",
+    "server": "node server.js",
+    "client": "node start-client.js",
+    "lint": "eslint ."
+  },
+  "author": "Niraj Palecha <nirajftw@gmail.com> (http://ninep.in)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "express": "4.16.2",
+    "fs": "0.0.1-security",
+    "request": "2.83.0",
+    "request-promise-native": "1.0.5",
+    "sql.js": "0.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.1",
+    "eslint": "4.16.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.6.1"
+  }
+}
