@@ -1,5 +1,6 @@
 var koinex = {
 	name: "koinex",
+	image: "images/exchanges/koinex.jpg",
 	url: "https://koinex.in/api/ticker",
 	transform: function(data) {
 		var res = {}
@@ -12,12 +13,13 @@ var koinex = {
 				sell: data.stats[c].lowest_ask
 			}
 		})
-		return {name:this.name, prices:prices}
+		return {name:this.name, image:this.image, prices:prices}
 	}
 }
 
 var bitbns = {
 	name: "bitbns",
+	image: "images/exchanges/bitbns.png",
 	url: "https://bitbns.com/order/getTickerAll",
 	transform: function(data) {
 		var prices = data.map(o => {
@@ -28,12 +30,13 @@ var bitbns = {
 				sell: o[coin].sellPrice
 			}
 		})
-		return {name: this.name, prices:prices}
+		return {name: this.name, image:this.image, prices:prices}
 	}
 }
 
 var zebpay = {
 	name: "zebpay",
+	image: "images/exchanges/zebpay.png",
 	url: "https://www.zebapi.com/api/v1/market/ticker/btc/inr",
 	// only btc for now
 	transform: function(data) {
@@ -42,12 +45,13 @@ var zebpay = {
 			buy: data.buy,
 			sell: data.sell
 		}]
-		return {name:this.name, prices: prices}
+		return {name:this.name, image:this.image, prices: prices}
 	}
 }
 
 var coinsecure = {
 	name: "coinsecure",
+	image: "images/exchanges/coinsecure.png",
 	url: "https://api.coinsecure.in/v1/exchange/ticker",
 	transform: function(data) {
 		var prices = [{
@@ -55,12 +59,13 @@ var coinsecure = {
 			buy: data.message.bid,
 			sell: data.message.ask
 		}]
-		return {name:this.name, prices:prices}
+		return {name:this.name, image:this.image, prices:prices}
 	}
 }
 
 var coindelta = {
 	name: "coindelta",
+	image: "images/exchanges/coindelta.png",
 	url: "https://coindelta.com/api/v1/public/getticker/",
 	transform: function(data) {
 
@@ -73,7 +78,7 @@ var coindelta = {
 				sell: o.Ask
 			}
 		})
-		return {name:this.name, prices:prices}
+		return {name:this.name, image:this.image, prices:prices}
 	}
 }
 
@@ -92,6 +97,7 @@ var btcxindia = {
 }
 var throughbit = {
 	name: "throughbit",
+	image: "images/exchanges/throughbit.png",
 	urls: {
 		"btc":"https://www.throughbit.com/tbit_ci/index.php/cryptoprice/type/btc/inr",
 		"eth":"https://www.throughbit.com/tbit_ci/index.php/cryptoprice/type/eth/inr"
@@ -107,7 +113,7 @@ var throughbit = {
 				sell: o[coin].data.price[0].sell_price,
 			}
 		})
-		return {name:this.name, prices:prices}
+		return {name:this.name, image:this.image, prices:prices}
 	}
 }
 
