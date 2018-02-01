@@ -6,7 +6,7 @@ const express   = require('express'),
 const app = express();
 
 app.get('/v1/prices', cors(), function (req, res) {
-  db.one("SELECT data from prices ORDER BY time DESC")
+  db.one("SELECT data from prices ORDER BY time DESC LIMIT 1")
   .then(d => res.json(d.data))
   .catch(err => console.log(err));
 });
